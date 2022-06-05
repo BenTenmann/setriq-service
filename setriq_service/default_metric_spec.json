@@ -1,0 +1,6 @@
+{
+  "id": "Levenshtein",
+  "param": {
+    "extra_cost": 0.0
+  }
+}
