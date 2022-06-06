@@ -1,0 +1,28 @@
+{
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": ".semantic-release/releaseImage.sh ${nextRelease.version}"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "./CHANGELOG.md",
+          "./helm/values.yaml",
+          "./helm/Chart.yaml"
+        ]
+      }
+    ]
+  ],
+  "tagFormat": "deploy-${version}",
+  "repositoryUrl": "https://github.com/BenTenmann/setriq-service"
+}
