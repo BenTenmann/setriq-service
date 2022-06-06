@@ -1,6 +1,6 @@
 image:
   name: setriq-service
-  tag: 0.1.0
+  tag: 1.0.0
 env:
   OMP_NUM_THREADS: 16
 ports:
