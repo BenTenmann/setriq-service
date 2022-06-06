@@ -21,7 +21,7 @@ curl -X POST localhost:9000/api/v1.0/predictions \
 ```
 
 This will return a JSON object with a single field `distances`, which is a JSON array of floats. In this case, this
-array will be of length 1, as $n * \frac{n - 1}{2} = 1$, where $n$ is the number of sequences.
+array will be of length 2, as $n \times \frac{n - 1}{2} = 2$, where $n$ is the number of sequences.
 
 The distances returned in this case are Levenshtein distances. This is because this is the default metric of the
 service (defined in `setriq_service/default_metric_spec.json`). However, any of the distance functions implemented in
