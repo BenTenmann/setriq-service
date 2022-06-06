@@ -1,5 +1,5 @@
 image:
-  name: setriq-service
+  name: btenmann/setriq-service
   tag: 1.0.0
 env:
   OMP_NUM_THREADS: 16
